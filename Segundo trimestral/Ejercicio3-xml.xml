@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<academia nombreacademia = "Trassierralangs" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="Ejercicio3.xsd">
+    <idioma nombreIdioma = "Ingles (EN)" codigoEstudio = "EN-A1" nivel = "C2" Anyo = "2021">
+        <descripcion>Descripcion para Idioma Inglés de nivel C2</descripcion>
+        <alumnos>
+            <alumno idAlumno = "12ABC">
+                <nombreAlumno>Raul</nombreAlumno>
+                <apellidos>Serrano Torres</apellidos>
+                <nota>8.5</nota>
+            </alumno>    
+        </alumnos>
+        <profesor>
+            <nif>69855814D</nif>
+            <nombreProfesor>Emerito Gutierrez Sosa</nombreProfesor>
+            <direccion>C/Falsa nº 123</direccion>
+            <telefono>695005352</telefono>
+            <email>emeg_ss@gmail.com</email>
+        </profesor>    
+    </idioma>
+</academia>

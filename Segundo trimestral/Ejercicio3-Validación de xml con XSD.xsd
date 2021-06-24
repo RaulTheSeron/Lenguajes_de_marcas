@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    
+    <xs:element name="academia">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="idioma"/>       		
+            </xs:sequence>
+            <xs:attribute name="nombreacademia" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="idioma">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="descripcion" type="xs:string" />
+                <xs:element ref = "alumnos"/>
+                <xs:element maxOccurs="1" ref = "profesor"/>          		
+            </xs:sequence>
+            <xs:attribute name="nombreIdioma" type="TnombreIdioma" use="required"/> 		 
+            <xs:attribute name="codigoEstudio" type="TcodEstudio" use="required"/>
+            <xs:attribute name="nivel" type="Tnivel" use="required"/>
+            <xs:attribute name="anyo" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="alumnos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="20" ref="alumno" />          		
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="alumno">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombreAlumno" type="xs:string"/>
+                <xs:element name="apellidos" type="xs:string"/>
+                <xs:element name="nota" type="Tnota"/>          		
+            </xs:sequence>
+            <xs:attribute name="idAlumno" type="TidAlumno" use="required"/> 		 
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="profesor">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nif" type="Tdni"/>
+                <xs:element name="nombreProfesor" type="xs:string"/>
+                <xs:element name="direccion" type="xs:string"/>
+                <xs:element name="telefono" type="Ttelefono" use="optional"/>
+                <xs:element name="email" type="Temail" use="optional"/>          		
+            </xs:sequence>		 
+        </xs:complexType>
+    </xs:element>
+    
+    
+    <!-- Tipos de datos -->
+    <xs:simpleType name="TnombreIdioma">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Inglés (EN)"/>
+            <xs:enumeration value="Fracés (FR)"/>
+            <xs:enumeration value="Alemán (Ge)"/>
+            <xs:enumeration value="Italiano (IT)"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="TcodEstudio">
+        <xs:restriction base="xs:string" >
+            <xs:pattern value="[A-Z]{2}[-][ABC][1-2]"/> 
+            <!--Dos letras mayúsculas + Nivel del idioma, por eso solo letras A,B y C y números 1 y 2-->
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="Tnivel">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="A1"/>
+            <xs:enumeration value="A2"/>
+            <xs:enumeration value="B1"/>
+            <xs:enumeration value="B2"/>
+            <xs:enumeration value="C1"/>
+            <xs:enumeration value="C2"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="Tnota">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0"/>
+            <xs:totalDigits value="2"/>
+            <xs:fractionDigits value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="TidAlumno">
+        <xs:restriction base="xs:string" >
+            <xs:pattern value="[0-9]{2}[A-Z]{3}" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="Tdni">
+        <xs:restriction base="xs:string" >
+            <xs:pattern value="[0-9]{8}[A-Za-z]" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="Ttelefono">
+        <xs:restriction base="xs:string" >
+            <xs:pattern value="+34*[0-9]{9}" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="Temail"> 
+        <xs:restriction base="xs:string"> 
+            <xs:pattern value="[^@]+@[^\.]+\..+"/> 
+        </xs:restriction> 
+    </xs:simpleType>
+    
+</xs:schema>

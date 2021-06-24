@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version ="2.0">
+    <channel>
+        <title>Instituto de Educación Secundaria Trassierra</title>
+        <link>http://www.iestrassierra.com/</link>
+        <description>
+            El I.E.S. (Instituto de Enseñanza Secundaria) “ Trassierra” es un centro público dependiente de la Junta
+            de Andalucía. Fue inaugurado en septiembre de 1983 como centro de Formación Profesional. Centro pionero en la capital de la
+            Reforma de las Enseñanzas Medias y en la aplicación de la L.O.G.S.E.. Este año cumple 33 años al servicio de la educación.
+        </description>
+        <language>es</language>
+        <pubDate>Wed, 17 Mar 2021 19:47:00 +0100</pubDate>
+        <skipDays>
+            <day>Saturday</day>
+            <day>Sunday</day>
+        </skipDays>
+        <skipHours>
+            <hour>17</hour>
+            <hour>18</hour>
+            <hour>19</hour>
+            <hour>20</hour>
+            <hour>21</hour>
+            <hour>22</hour>
+            <hour>23</hour>
+        </skipHours>
+        <webMaster>serrano_torres_raul@outlook.es</webMaster>
+        <managingEditor>serrano_torres_raul@outlook.es</managingEditor>
+        <copyright>IES Trassierra-Junta de Andalucía</copyright>      
+        <item>
+            <title>Pruebas para la obtención de títulos de bachillerato para mayores de 20 años</title>
+            <link>https://www.iestrassierra.com/pruebas-para-la-obtencion-del-titulo-de-bachillerato-para-mayores-de-20-anos/</link>
+            <description>
+                Convocadas pruebas para la obtención del título de Bachiller en la Comunidad Autónoma de Andalucía para personas mayores de veinte años.
+            </description>
+            <author>serrano_torres_raul@outlook.es</author>
+            <pubDate>Wed, 17 Mar 2021 19:50:00 +0100</pubDate>
+        </item> 
+    </channel>
+</rss>

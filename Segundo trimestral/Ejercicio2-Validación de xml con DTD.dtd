@@ -1,0 +1,30 @@
+<!ELEMENT academia (idioma+)>
+<!ATTLIST academia
+    nombreacademia CDATA #REQUIRED
+  >
+<!ELEMENT idioma (descripcion,alumnos,profesor)>
+<!ATTLIST idioma
+    nombreIdioma (Inglés(EN)|Francés(FR)|Alemán(GE)|Italiano(IT)) CDATA #REQUIRED
+    codigoEstudio CDATA #REQUIRED
+    nivel (A1|A2|B1|B2|C1|C2) CDATA #REQUIRED
+    Anyo  CDATA #REQUIRED
+  >
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT alumnos (alumno+)>
+<!ELEMENT alumno (nombreAlumno,apellidos,nota)>
+<!ATTLIST alumno
+    idAlumno CDATA #REQUIRED
+  >
+<!ELEMENT nombreAlumno (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT nota (#PCDATA)>
+<!ELEMENT profesor (nif,nombreProfesor,direccion,telefono?,email?)>
+<!ELEMENT nif (#PCDATA)>
+<!ELEMENT nombreProfesor (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+
+
+
+
