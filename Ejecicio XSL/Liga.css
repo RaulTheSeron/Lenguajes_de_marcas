@@ -1,0 +1,66 @@
+*{
+    color: darkblue;
+}
+body{
+    text-align: center;
+    text-decoration:none;
+
+}
+.seccion{
+    width: 80vw;
+    align-content: center;
+    border: solid 1px;
+    float: left;
+    text-align: center;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    padding: 20px;
+    height: 400px;
+    overflow-y: scroll;
+
+}
+
+#C1{
+    background-color: HoneyDew;
+
+}
+#C2{
+    background-color: LavenderBlush;
+
+}
+
+table{
+    margin: 0 auto;
+ 
+  border:  3px solid;
+
+}
+
+td,
+th{
+    border: solid 1px;
+    text-align: center;
+    background-color: white;
+
+}
+table tr th{
+    background-color: #ABEBC6 ;
+}
+
+h1{
+    color: green;
+    font-weight: bold;
+    text-align: center;
+    font-variant: small-caps;
+}
+h2{
+    color: black;
+    font-weight: bold;
+        font-variant: small-caps;
+       text-align: center;
+   vertical-align: middle;
+
+
+}
